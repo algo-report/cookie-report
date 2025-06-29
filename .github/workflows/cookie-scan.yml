@@ -2,9 +2,8 @@ name: Monthly Cookie Scan
 
 on:
   schedule:
-    # At 00:00 on the 1st day of every month
     - cron: '0 0 1 * *'
-  workflow_dispatch: # opsional, untuk menjalankan manual via GitHub UI
+  workflow_dispatch:
 
 jobs:
   scan:
@@ -17,10 +16,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # sesuaikan dengan kebutuhan kamu
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install puppeteer node-fetch
+
+      - name: Install Chrome for Puppeteer
+        run: npx puppeteer browsers install chrome
 
       - name: Run cookie scanner
         run: node cookie-scan.js
