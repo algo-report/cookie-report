@@ -19,10 +19,7 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install puppeteer node-fetch
-
-      - name: Install Chrome for Puppeteer
-        run: npx puppeteer browsers install chrome
+        run: npm install puppeteer@20 node-fetch
 
       - name: Run cookie scanner
         run: node cookie-scan.js
