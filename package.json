@@ -1,0 +1,12 @@
+{
+  "name": "cookie-scanner",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node cookie-scan.js"
+  },
+  "dependencies": {
+    "node-fetch": "^3.3.2",
+    "puppeteer": "^24.11.1"
+  }
+}
