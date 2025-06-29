@@ -23,4 +23,4 @@ jobs:
         run: npm install puppeteer node-fetch
 
       - name: Run cookie scanner
-        run: node scripts/cookie-scan.js
+        run: node cookie-scan.js
